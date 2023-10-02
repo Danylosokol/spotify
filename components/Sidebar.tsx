@@ -3,6 +3,7 @@
 import { BiSearch } from "react-icons/bi";
 import Box from "./Box";
 import { HiHome } from "react-icons/hi";
+import Library from "./Library";
 import React from "react";
 import SidebarItem from "./SidebarItem";
 import { useMemo } from "react";
@@ -38,8 +39,9 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
           key={item.label}
           {...item}
         />))}</div></Box>
-        <Box className="overflow-y-auto h-full"> Song Library</Box>
+        <Box className="overflow-y-auto h-full"><Library/></Box>
       </div>
+      <main className={"h-full flex-1 overflow-y-auto py-2"}>{children}</main>
     </div>
   );
 };
